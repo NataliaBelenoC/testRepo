@@ -14,15 +14,25 @@ import java.util.Scanner;
  */
 public class Juego {
     public static void main(String[] args){
-        System.out.println("Dame un número entre 1 y 20");
-        Scanner teclado = new Scanner(System.in);
-        int numero = Integer.parseInt(teclado.nextLine());
         Random r = new Random();
-        int numeroAleatorio = r.nextInt(20)+1;
+        int numero;
+        int numeroAleatorio;  
+        Scanner teclado = new Scanner(System.in);
+        
+        do{
+        System.out.println("Dame un número entre 1 y 20"); 
+        
+        numero = Integer.parseInt(teclado.nextLine());
+        numeroAleatorio = r.nextInt(20)+1;
         if(numero == numeroAleatorio){
             System.out.println("Ganaste!");
         }else{
             System.out.println("El número correcto era "+ numeroAleatorio + " y no "+ numero);
         }
+        
+    }while(numero != numeroAleatorio);{
+        
+    }
+        
     }
 }
